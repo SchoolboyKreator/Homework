@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import {Input} from "../4/Input";
 
 export const HW3 = () => {
     // 1️⃣ Раскомментируйте JSX(HW3.tsx) и вы увидите,
@@ -36,9 +37,9 @@ export const HW3 = () => {
                 <h1 id={'hw03-default-text'}>Здесь появится новое дело</h1> // ничего не меняем, здесь все норм
             )}
 
-            <input id={'hw03-input'} type="text" value={currentText}
-                   onChange={(e) => handleChange(e.currentTarget.value)}/>
-
+            {/*<input id={'hw03-input'} type="text" value={currentText}*/}
+            {/*       onChange={(e) => handleChange(e.currentTarget.value)}/>*/}
+            <Input setCurrentText={setCurrentText} currentText={currentText}/>
             <button id={'hw03-button'} onClick={handleSave}>
                 Сохранить
             </button>
